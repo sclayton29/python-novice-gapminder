@@ -9,7 +9,7 @@ objectives:
 - "Understand the limitations of running Python in Bash"
 - "Justify the use of other tools for teaching and development"
 keypoints:
--"There are multiple ways to interact with Python"
+- "There are multiple ways to interact with Python"
 ---
 ## Python can be launched from the Bash Shell
 We can work in python without using a text editor or integrated development environment(ide). Instead we can launch python from our Bash Shell.
@@ -32,10 +32,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 {: .output}
 
 We can now start entering python. We can do simply arthimtic.
+
 ~~~
 >>> 3+5
 ~~~
 {: .python}
+
 ~~~
 8
 ~~~
@@ -47,6 +49,7 @@ Or assign and call variables
 >>> print(first_name)
 ~~~
 {: .python}
+
 ~~~
 Sarah
 ~~~
@@ -54,4 +57,4 @@ Sarah
 
 Working in this environment, you can use many of the same shortcuts including tab completion and the up arrow to return to previous commands.
 
-There are several limitations to working with python in this environment. To demonstration, let's write a loop. We will cover python loops in more detail later in this lesson. 
+There are several limitations to working with python in this environment. To demonstration, let's write a loop. We will cover python loops in more detail later in this lesson.
