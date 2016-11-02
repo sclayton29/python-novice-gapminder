@@ -44,6 +44,7 @@ We can now start entering python. We can do simply arthimtic.
 {: .output}
 
 Or assign and call variables
+
 ~~~
 >>> first_name="Sarah"
 >>> print(first_name)
@@ -58,7 +59,7 @@ Sarah
 
 Working in this environment, you can use many of the same shortcuts including tab completion and the up arrow to return to previous commands.
 
-There are several limitations to working with python in this environment. A major one is that their is no ability to save or export your work. You also cannot run multiple lines of code at once. The Python Interupter is handy for quick testing. 
+There are several limitations to working with python in this environment. A major one is that their is no ability to save or export your work. You also cannot run multiple lines of code at once. The Python Interupter is handy for quick testing.
 
 Writing Python in a Text Editor or Interactive Python Environment will allow to write, run, save, and re-run your python programs. Most also will provide visual clues to help you with your python syntax.
 
