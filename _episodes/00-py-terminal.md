@@ -1,7 +1,7 @@
 ---
 title: "Python Interupter in Bash"
 teaching: 5
-exercises: 1
+exercises: 0
 questions:
 - "How can I use python in the Bash Shell?"
 objectives:
@@ -59,7 +59,7 @@ Sarah
 
 Working in this environment, you can use many of the same shortcuts including tab completion and the up arrow to return to previous commands.
 
-##Limitations of the Python Interupter
+## Limitations of the Python Interupter
 
 There are several limitations to working with python in this environment. A major one is that their is no ability to save or export your work. You also cannot run multiple lines of code at once. The Python Interupter is handy for quick testing.
 
