@@ -10,6 +10,8 @@ objectives:
 - "Justify the use of other tools for teaching and development"
 keypoints:
 - "There are multiple ways to interact with Python"
+- "The Python Interputer within Bash is useful for testing, but has limitations"
+- "You will want to work with a IDE or Text Editor to write Python"
 ---
 ## Python can be launched from the Bash Shell
 We can work in python without using a text editor or integrated development environment(ide). Instead, we can launch the Python Interputer within the Bash Shell.
