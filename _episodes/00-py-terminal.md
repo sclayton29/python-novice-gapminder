@@ -67,4 +67,6 @@ There are several limitations to working with python in this environment. A majo
 
 Writing Python in a Text Editor or Interactive Python Environment will allow to write, run, save, and re-run your python programs. Most also will provide visual clues to help you with your python syntax.
 
-Today, we are going to be working with the juypter notebook, which is a great tool for learning. As you start to work more with python, you will find the tool that works best for you. Some popular options are Atom or Sublime Text.
+Today, we are going to be working with the juypter notebook, which is a great tool for learning. As you start to work more with python, you will find the tool that works best for you. Some popular options are Atom or Sublime Text.\
+
+To exit the python interputer, you need to press Control D or enter quit(). 
