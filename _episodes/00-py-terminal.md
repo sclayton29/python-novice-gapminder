@@ -90,6 +90,12 @@ Working in this environment, you can use many of the same shortcuts including ta
 ~~~
 print (first_name, last_name)
 ~~~
+{: .python}
+
+~~~
+Jane Smith
+~~~
+{: .output}
 
 ## Limitations of the Python Interpreter
 
