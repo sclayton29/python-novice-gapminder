@@ -58,7 +58,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ~~~
 {: .output}
 
-We can now start entering python. We can do simply arthimtic.
+We can now start entering python. We can do simple arthimtic.
 
 ~~~
 >>> 3+5
