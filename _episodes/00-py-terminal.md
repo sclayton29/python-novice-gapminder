@@ -1,5 +1,5 @@
 ---
-title: "Python Interupter in Bash"
+title: "Python Interpreter in Bash"
 teaching: 5
 exercises: 0
 questions:
@@ -14,7 +14,7 @@ keypoints:
 - "You will want to work with a IDE or Text Editor to write Python"
 ---
 ## Python can be launched from the Bash Shell
-We can work in python without using a text editor or integrated development environment(ide). Instead, we can launch the Python Interputer within the Bash Shell.
+We can work in python without using a text editor or integrated development environment(ide). Instead, we can launch the Python Interpreter within the Bash Shell.
 
 Open your shell window and navigation to your data for this lesson. Enter python into the window.
 
@@ -61,12 +61,12 @@ Sarah
 
 Working in this environment, you can use many of the same shortcuts including tab completion and the up arrow to return to previous commands.
 
-## Limitations of the Python Interupter
+## Limitations of the Python Interpreter
 
-There are several limitations to working with python in this environment. A major one is that their is no ability to save or export your work. You also cannot run multiple lines of code at once. The Python Interupter is handy for quick testing.
+There are several limitations to working with python in this environment. A major one is that their is no ability to save or export your work. You also cannot run multiple lines of code at once. The Python Interpreter is handy for quick testing.
 
 Writing Python in a Text Editor or Interactive Python Environment will allow to write, run, save, and re-run your python programs. Most also will provide visual clues to help you with your python syntax.
 
 Today, we are going to be working with the juypter notebook, which is a great tool for learning. As you start to work more with python, you will find the tool that works best for you. Some popular options are Atom or Sublime Text.\
 
-To exit the python interputer, you need to press Control D or enter quit(). 
+To exit the Interpreter, you need to press Ctrl-D or enter quit(). 
