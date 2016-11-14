@@ -116,7 +116,7 @@ NameError: name 'last_name' is not defined
 ~~~
 {: .output}
 
-You recieve a traceback error because your work is not saved between sessions.
+You receive a traceback error because your work is not saved between sessions.
 
 Writing Python in a Text Editor or Interactive Python Environment will allow to write, run, save, and re-run your python programs. Most also will provide visual clues to help you with your python syntax.
 
