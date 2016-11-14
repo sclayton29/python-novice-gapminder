@@ -13,6 +13,31 @@ keypoints:
 - "The Python Interputer within Bash is useful for testing, but has limitations"
 - "You will want to work with a IDE or Text Editor to write Python"
 ---
+## Understanding our data
+Before we dive into python. Let's look at our data. First, navigate to the directory where you saved your data. The data should be in the gapminder-py folder and in the data directory. Once you are in data run a ls to see all of your files.
+
+~~~
+$ cd gapminder-py/data
+$ ls
+~~~
+{: .bash}
+
+You should see six csv files. Take a closer look at the gapminder_gdp_oceania.csv file by using cat.
+
+~~~
+$ cat gapminder_gdp_oceania.csv
+~~~
+{: .bash}
+
+~~~
+country,gdpPercap_1952,gdpPercap_1957,gdpPercap_1962,gdpPercap_1967,gdpPercap_1972,gdpPercap_1977,gdpPercap_1982,gdpPercap_1987,gdpPercap_1992,gdpPercap_1997,gdpPercap_2002,gdpPercap_2007
+Australia,10039.59564,10949.64959,12217.22686,14526.12465,16788.62948,18334.19751,19477.00928,21888.88903,23424.76683,26997.93657,30687.75473,34435.36744
+New Zealand,10556.57566,12247.39532,13175.678,14463.91893,16046.03728,16233.7177,17632.4104,19007.19129,18363.32494,21050.41377,23189.80135,25185.00911
+~~~
+{: .output}
+
+As we can see our data is a spreadsheet with historical GDP for individual countries. Now that we understand our data a bit better, let's move onto python.
+
 ## Python can be launched from the Bash Shell
 We can work in python without using a text editor or integrated development environment(ide). Instead, we can launch the Python Interpreter within the Bash Shell.
 
@@ -69,4 +94,4 @@ Writing Python in a Text Editor or Interactive Python Environment will allow to 
 
 Today, we are going to be working with the juypter notebook, which is a great tool for learning. As you start to work more with python, you will find the tool that works best for you. Some popular options are Atom or Sublime Text.\
 
-To exit the Interpreter, you need to press Ctrl-D or enter quit(). 
+To exit the Interpreter, you need to press Ctrl-D or enter quit().
