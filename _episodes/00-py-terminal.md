@@ -73,22 +73,44 @@ We can now start entering python. We can do simple arthimtic.
 Or assign and call variables
 
 ~~~
->>> first_name="Sarah"
+>>> first_name="Jane"
+>>> last_name ="Smith"
 >>> print(first_name)
 ~~~
 {: .python}
 
 ~~~
-Sarah
+Jane
 ~~~
 {: .output}
 
 
-Working in this environment, you can use many of the same shortcuts including tab completion and the up arrow to return to previous commands.
+Working in this environment, you can use many of the same shortcuts including tab completion and the up arrow to return to previous commands. Print the first_name and last_name using tab completion. You need to separate the variables with a comma.
+
+~~~
+print (first_name, last_name)
+~~~
 
 ## Limitations of the Python Interpreter
 
 There are several limitations to working with python in this environment. A major one is that their is no ability to save or export your work. You also cannot run multiple lines of code at once. The Python Interpreter is handy for quick testing.
+
+Quit the Python Interpreter using Ctrl-D. Now, re-open the interpreter and try to call the last_name variable you created in your last session.
+
+~~~
+>>> python
+>>> print (last_name)
+~~~
+{: .python}
+
+~~~
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'last_name' is not defined
+~~~
+{: .output}
+
+You recieve a traceback error because your work is not saved between sessions.
 
 Writing Python in a Text Editor or Interactive Python Environment will allow to write, run, save, and re-run your python programs. Most also will provide visual clues to help you with your python syntax.
 
