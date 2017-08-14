@@ -20,6 +20,7 @@ keypoints:
 *   And lists can contain character strings.
 
 ~~~
+import pandas
 for filename in ['data/gapminder_gdp_africa.csv', 'data/gapminder_gdp_asia.csv']:
     data = pandas.read_csv(filename, index_col='country')
     print(filename, data.min())
@@ -53,7 +54,8 @@ dtype: float64
 *   The most common patterns are:
     *   `*` meaning "match zero or more characters"
     *   `?` meaning "match exactly one character"
-*   Provided in Python by the `glob` library, which provides a function also called `glob`.
+*   Python contains the `glob` library to provide pattern matching functionality
+*   The `glob` library contains a function also called `glob` to match file patterns
 *   E.g., `glob.glob('*.txt')` matches all files in the current directory 
     whose names end with `.txt`.
 *   Result is a (possibly empty) list of character strings.
@@ -113,6 +115,11 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > 2. `data/gapminder_gdp_americas.csv`
 > 3. `data/gapminder_gdp_asia.csv`
 > 4. 1 and 2 are not matched.
+>
+> > ## Solution
+> >
+> > 1 is not matched by the regular expresion.
+> {: .solution}
 {: .challenge}
 
 > ## Minimum File Size
@@ -121,12 +128,28 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > the file that has the fewest records.
 >
 > ~~~
+> import pandas
 > fewest = ____
 > for filename in glob.glob('data/*.csv'):
->     fewest = min(____, ____)
+>     dataframe = pandas.____(filename)
+>     fewest = min(____, dataframe.shape[0]) 
 > print('smallest file has', fewest, 'records')
 > ~~~
 > {: .python}
+> Notice that the shape method returns a tuple with 
+> the number of rows and columns of the data frame.
+>
+> > ## Solution
+> > ~~~
+> > import pandas
+> > fewest = 0
+> > for filename in glob.glob('data/*.csv'):
+> >     dataframe = pandas.read_csv(filename)
+> >     fewest = min(fewest , dataframe.shape[0]) 
+> > print('smallest file has', fewest, 'records')
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Comparing Data

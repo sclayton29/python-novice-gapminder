@@ -130,6 +130,35 @@ result of call is: None
 ~~~
 {: .output}
 
+> ## Identifying Syntax Errors
+>
+> 1. Read the code below and try to identify what the errors are
+>    *without* running it.
+> 2. Run the code and read the error message.
+>    Is it a `SyntaxError` or an `IndentationError`?
+> 3. Fix the error.
+> 4. Repeat steps 2 and 3 until you have fixed all the errors.
+>
+> ~~~
+> def another_function
+>   print("Syntax errors are annoying.")
+>    print("But at least python tells us about them!")
+>   print("So they are usually not too hard to fix.")
+> ~~~
+> {: .python}
+>
+> > ## Solution
+> >
+> > ~~~
+> > def another_function():
+> >   print("Syntax errors are annoying.")
+> >   print("But at least Python tells us about them!")
+> >   print("So they are usually not too hard to fix.")
+> > ~~~
+> > {: .python}
+> {: .solution}
+{: .challenge}
+
 > ## Definition and Use
 >
 > What does the following program print?
@@ -139,6 +168,7 @@ result of call is: None
 >     print('pressure is', pressure)
 >
 > print('calling', report, 22.5)
+> ~~~
 {: .challenge}
 
 > ## Order of Operations
@@ -210,11 +240,62 @@ result of call is: None
 > {: .python}
 {: .challenge}
 
+> ## Encapsulate of If/Print Block
+>
+> The code below will run on a label-printer for chicken eggs.  A digital scale will report a chicken egg mass (in grams) to the computer and then the computer will print a label.  
+>
+> Please re-write the code so that the if-block is folded into a function.
+>
+> ~~~
+>  import random
+>  for i in range(10):
+>
+>     # simulating the mass of a chicken egg
+>     # the (random) mass will be 70 +/- 20 grams
+>     mass=70+20.0*(2.0*random.random()-1.0)
+>
+>     print(mass)
+>    
+>     #egg sizing machinery prints a label
+>     if(mass>=85):
+>        print("jumbo")
+>     elif(mass>=70):
+>        print("large")
+>     elif(mass<70 and mass>=55):
+>        print("medium")
+>     else:
+>        print("small")
+> ~~~
+> {: .python}
+>
+>
+> The simplified program  follows.  What function definition will make it functional?
+>
+> ~~~
+>  # revised version
+>  import random
+>  for i in range(10):
+>
+>     # simulating the mass of a chicken egg
+>     # the (random) mass will be 70 +/- 20 grams
+>     mass=70+20.0*(2.0*random.random()-1.0)
+>
+>     print(mass,print_egg_label(mass))    
+>
+> ~~~
+> {: .python}
+>
+>
+> 1. Create a function definition for `print_egg_label()` that will work with the revised program above.  Note, the function's return value will be signifigant. Sample output might be `71.23 large`.
+> 2.  A dirty egg might have a mass of more than 90 grams, and a spoiled or broken egg will probably have a mass that's less than 50 grams.  Modify your `print_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
+>
+{: .challenge}
+
 > ## Encapsulating Data Analysis
 >
 > Assume that the following code has been executed:
 >
-> ~~~ 
+> ~~~
 > import pandas
 >
 > df = pandas.read_csv('gapminder_gdp_asia.csv', index_col=0)
@@ -225,7 +306,7 @@ result of call is: None
 > 1. Complete the statements below to obtain the average GDP for Japan
 >    across the years reported for the 1980s.
 >
-> ~~~ 
+> ~~~
 > year = 1983
 > gdp_decade = 'gdpPercap_' + str(year // ____)
 > avg = (japan.ix[gdp_decade + ___] + japan.ix[gdp_decade + ___]) / 2
@@ -248,13 +329,13 @@ result of call is: None
 >    if you did not know beforehand which specific years occurred as columns in the data?
 >    For instance, what if we also had data from years ending in 1 and 9 for each decade?
 >    (Hint: use the columns to filter out the ones that correspond to the decade,
->    instead of enumerating them in the code.) 
+>    instead of enumerating them in the code.)
 >
 > > ## Solution
 > >
-> > 1. 
+> > 1.
 > >
-> > ~~~ 
+> > ~~~
 > > year = 1983
 > > gdp_decade = 'gdpPercap_' + str(year // 10)
 > > avg = (japan.ix[gdp_decade + '2'] + japan.ix[gdp_decade + '7']) / 2
@@ -279,7 +360,7 @@ result of call is: None
 > > ~~~
 > > def avg_gdp_in_decade(country, continent, year):
 > >     df = pd.read_csv('gapminder_gdp_' + continent + '.csv', index_col=0)
-> >     c = df.ix[country] 
+> >     c = df.ix[country]
 > >     gdp_decade = 'gdpPercap_' + str(year // 10)
 > >     total = 0.0
 > >     num_years = 0
@@ -288,6 +369,51 @@ result of call is: None
 > >             total = total + c.ix[yr_header]
 > >             num_years = num_years + 1
 > >     return total/num_years
+> > ~~~
+> > {: .python}
+> {: .solution}
+
+> ## Simulating a dynamical system
+>
+> In mathematics, a [dynamical system](https://en.wikipedia.org/wiki/Dynamical_system) is a system in which a function describes the time dependence of a point in a geometrical space.  Canonical example of a dynamical system is a system called the [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
+>
+>
+> 1. Define a function called `logistic_map` that takes two inputs: `X`, representing the state of the system at time _t_, and a parameter `r`. This function should return a value representing the state of the system at time _t+1_.
+>
+> 2. Using a `for` loop, iterate the `logistic_map` function defined in part 1 starting from an initial condition of 0.5 for `T=10`, `100`, and `1000` periods. Store the intermediate results in a list so that after the `for` loop terminates you have accumulated a sequence of values representing the state of the logistic map at time _t=0,1,...,T_.
+>
+> 3. Encapsulate the logic of your `for` loop into a function called `iterate` that takes the initial condition as its first input, the parameter `T` as its second input and the parameter `r` as its third input. The function should return the list of values representing the state of the logistic map at time _t=0,1,...,T_.
+>
+>
+> > ## Solution
+> >
+> > 1.
+> >
+> > ~~~
+> > def logistic_map(X, r):
+> >     return r * X * (1 - X)
+> > ~~~
+> > {: .python}
+> >
+> > 2.
+> >
+> > ~~~
+> > initial_condition = 0.5
+> > T = 10
+> > r = 1.0
+> > trajectory = [initial_condition]
+> > for t in range(1, T):
+> >     trajectory[t] = logistic_map(trajectory[t-1], r)
+> > ~~~
+> > {: .python}
+> >
+> > 3.
+> > ~~~
+> > def iterate(initial_condition, T, r):
+> >     trajectory = [initial_condition]
+> >     for t in range(1, T):
+> >         trajectory[t] = logistic_map(trajectory[t-1], r)
+> >     return trajectorys
 > > ~~~
 > > {: .python}
 > {: .solution}
